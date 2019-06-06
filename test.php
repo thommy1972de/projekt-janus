@@ -21,7 +21,7 @@ $job_source_company = $_GET['job_source_company'];
 $job_destination_city = $_GET["job_destination_city"];
 $job_destination_company = $_GET["job_destination_company"];
 
-echo $truck_gear;
+echo $truck_gear; 
 
 
 $statement = $pdo_server->prepare("SELECT * FROM userdaten WHERE client_key = ?");

@@ -17,7 +17,7 @@ Diese Seite richtet sich an virtuelle Spediteure und ihre Fahrer.
 <?
 if(isset($_POST['senden'])) {
 
-$username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_STRING);
+$username = filter_input(INPUT_POST, "username", FILTER_VALIDATE_EMAIL);
 $passwort = filter_input(INPUT_POST, "passwort", FILTER_SANITIZE_STRING);
 
 $statement = $pdo->prepare("SELECT * FROM user WHERE email = ? LIMIT 1");
